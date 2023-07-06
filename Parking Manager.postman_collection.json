@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "dc49792c-2b29-4a03-8db1-5f0d7c584fb4",
+		"name": "Parking Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15901867"
+	},
+	"item": [
+		{
+			"name": "Create parking spot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"parkingSpotNumber\": \"A03\",\n  \"licensePlateCar\": \"MSA5X60\",\n  \"brandCar\": \"Hyundai\",\n  \"modelCar\": \"Azera\",\n  \"colorCar\": \"White\",\n  \"responsibleName\": \"Danilo Maciel\",\n  \"apartment\": \"03\",\n  \"block\": \"A\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/parking-spot",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"parking-spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"parkingSpotNumber\": \"A03\",\n  \"licensePlateCar\": \"MSA5X60\",\n  \"brandCar\": \"Hyundai\",\n  \"modelCar\": \"Azera\",\n  \"colorCar\": \"White\",\n  \"responsibleName\": \"Danilo Maciel\",\n  \"apartment\": \"03\",\n  \"block\": \"A\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/parking-spot/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"parking-spot",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "80471df7-4fc9-47d9-bc39-8333b13fccdb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all parking spot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/parking-spot?page=0&size=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"parking-spot"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "registrationDate",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/parking-spot/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"parking-spot",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "80471df7-4fc9-47d9-bc39-8333b13fccdb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/parking-spot/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"parking-spot",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "9082f6b8-c80c-4093-a6d2-b0f2b5817acf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
